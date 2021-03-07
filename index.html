@@ -31,32 +31,57 @@
 			color: #15AB89
 		}
 
-		
+		.subtitle {
+			font-size: 28px;
+			color: #049BDE;
+			padding: 16px
+		}
 	</style>
 </head>
 
 <body>
 	<div class="reveal">
 		<div class="slides">
-			<section>
-				<h2>Kickoff SJSU(Spring 2021) - Ediligence</h2>
-				<h4>3/4/2021</h4>
+			<section id="HeadingSlide">
+				<img width="400px" data-src="./examples/assets/eDILLogoTrans.png">
+				<div>SJSU Webapp projects kickoff<br />
+					<br />
+					<div class="subtitle">Spring 2021</div>
+				</div>
 			</section>
 			<section>
-				<section>SJSU Teams</section>
+				<section id="TeamsInfo">SJSU Teams</section>
 				<section>
 					From Joel's Email
 					<img class="r-frame" width="100%" height="100%" data-src="./examples/assets/ProjectList.jpg">
 				</section>
+
+				<section id="TeamSummaries"> Team Summaries
+					<div class="topicHeading">Team 2A - Widget data list views</div>
+					<span class="content">Vinay & Aditya</span>
+					<div class="topicHeading">Team 2B - Widget explaination views</div>
+					<span class="content">Xichao and Lasya</span>
+					<div class="topicHeading">Team 4 - Widget customizations</div>	
+					<span class="content">Aditya and Palak</span>
+					<div class="topicHeading">Team 6 - New Viz Library Integration</div>
+					<span class="content">Anushree</span>				
+				</section>
 			</section>
 			<section>
-				<section>Project widgets</section>
-				<section>
+				<section id="ProjectsIntro">Project widgets
+					<div class="topicHeading">Project widgets display analysis, predictions and calculations for a
+						single
+						loan
+						applications/project. </div><span class="content">A project can be: </span>
+					<div class="topicHeading"><a href="#/UnderReviewProject">Under Review</a></div>
+					<div class="topicHeading"><a href="#/InProgressProject">In Progress</a></div>
+				</section>
+				<section id="UnderReviewProject">
 					Under Review Project
 					<img class="r-frame" width="100%" height="100%"
 						data-src="./examples/assets/ViewProject_UnderReview_Info.jpg">
 				</section>
-				<section>
+				<section id="InProgressProject">
 					In Progress Project
 					<img class="r-frame" width="100%" height="100%"
 						data-src="./examples/assets/ViewProject_InProgress_Info.jpg">
@@ -64,75 +89,142 @@
 			</section>
 
 			<section>
-				<section>Portfolio Widgets</section>
-				<section>
+				<section id="PortfolioIntro">Portfolio Widgets
+					<div class="topicHeading">Multiple projects are grouped under a portfolio. <br /> The portfolio
+						dashboard shows aggregated data, analysis and metric performances across all projects. </div>
+					<div class="topicHeading"><a href="#/PortfolioView">Dashboard</a></div>
+					<div class="topicHeading"><a href="#/BudgetView">Budget View</a></div>
+				</section>
+				<section id="PortfolioView">
 					<img class="r-frame" width="100%" height="100%" data-src="./examples/assets/Portfolio_Schedule.jpg">
+				</section>
+
+				<section id="BudgetView">
+					<img class="r-frame" width="50%" height="50%"
+						data-src="./examples/assets/Schedule&BudgetWidget.jpg">
 				</section>
 			</section>
 
 			<section>
-				<section>Widgets 2.0 requirements</section>
-				<section>
-					Business & Design Requirements
+				<section id="Requirements">Widgets 2.0 requirements</section>
+				<section id="BusinessRequirements">
+					Business and UX Requirements
 					<div class="content">
 						<div class="section fragment">
 							<div class="topicHeading"> Data is navigable</div>
-							Aggregated and/or visualized data can be "drilled through"
+							Aggregated and/or visualized data can be "drilled through" to show the user "raw" unaggregated data
+							and performance values.
 						</div>
 						<div class="section fragment">
 							<div class="topicHeading">Analysis is explainaible</div>
-							ML models, analysis and metric information should be explainaible to the user to instill
-								trust in the system
+							Machine Learning models, analysis and metric calculations should be explainaible to the user
+							to instill
+							trust in the system
 						</div>
 						<div class="section fragment">
-							<div class="topicHeading">Widget calculations are editable</div>
-							The benchmarks and levers of the analysis should be tweakable
+							<div class="topicHeading">Widget calculations are customizable</div>
+							The benchmarks and levers of the analysis presented in the widgets should be tweakable
 						</div>
 						</span>
 					</div>
 				</section>
-				<section>
-					Technical Requirements
+				<section id="DesignRequirements">
+					UI Requirements
+					<div class="content">
+						<div class="section fragment">
+							<div class="topicHeading"> Consistent and Predictable UI </div>
+							Widget interactions and UI should feel intuitive and consistent across all widgets(as much
+							as possible)
+						</div>
+						<div class="section fragment">
+							<div class="topicHeading">Modular component widgets</div>
+							Each self contained widget can work independent from anything else on the page, and can have
+							its own set of properties that are persisted based on user preferences and interactions.
+						</div>
+						<div class="section fragment">
+							<div class="topicHeading">Scalable</div>
+							Widget container and information components should be scalable and adaptive to user screen
+							and data variability.
+						</div>
+						</span>
+					</div>
 				</section>
 			</section>
 
 			<section>
-				<section>Widgets 2.0 UI/UX Architecture Designs</section>
-				
-					<section>
-						Widget Template and Container
-					</section>
-					<section data-background-image="./examples/assets/WidgetContainer.png" 
-					data-background-size="90%">
-				</section>
-					<section data-background-image="./examples/assets/Widget_HeightExpanded.gif" 
-					data-background-size="90%">
-				</section>
-				<section data-background-image="./examples/assets/Widget_WidthExpanded.gif" 
-					data-background-size="90%">
-				</section>
-				
-				
-				
+				<section id="UIArchitectureDesigns">Widgets 2.0 UI/UX Architecture Designs</section>
 				<section>
-					Widget list view
+					Widget Container
+				</section>
+				<section id="WidgetHeightAnimation" data-background-image="./examples/assets/Widget_HeightExpanded.gif"
+					data-background-size="90%">
+				</section>
+				<section id="WidgetWidthAnimation" data-background-image="./examples/assets/Widget_WidthExpanded.gif"
+					data-background-size="90%">
+				</section>
+				<section>
+					Widget data list view
+				</section>
+				<section id="WidgetListViewInteraction"
+					data-background-image="./examples/assets/Widget_DrawStatus_DrillThrough.gif"
+					data-background-size="90%">
 				</section>
 				<section>
 					Widget explaination view
 				</section>
-				<section>
-					Widget viz view
+				<section id="WidgetExplainViewInteraction"
+					data-background-image="./examples/assets/Widget_DirectCostForecast_Explain.gif"
+					data-background-size="90%">
 				</section>
 				<section>
 					Widget Customizations
 				</section>
+				<section id="CustomizeWidgetsPage" data-background-image="./examples/assets/CustomizeWidgets.png"
+					data-background-size="90%">
+				</section>
 			</section>
-
-
 			<section>
-				<h3>Next Steps</h3>
-				<li>Recurring meeting setup</li>
-				<li>Individual discovery meeting setup</li>
+				<section>
+					Next Steps
+
+					<div class="topicHeading"><a href="#/TeamSummaries">Team Summaries</a></div>
+
+				</section>
+				<section>
+					Discovery meetings
+					<div class="topicHeading">Technical setup meeting</div>
+					<span class="content">Get environment setup, with help and documentation from Ediligence. Decide on tools and communication channels.</span>
+					<div class="topicHeading">Detailed design and scope discussion for individual team tasks</div>
+					<span class="content">Meet with design and PM to ask questions about subject matter and desired delivery</span>
+					<div class="topicHeading">API and data model discovery</div>
+					<span class="content">Understand the existing APIs and identify need for new APIs and other touch points with backend</span>
+				</section>
+				<section>
+					Regular Sync meetings
+					<div class="topicHeading">WebApp Squad Group meeting</div>
+					<span class="content">Biweekly squad meeting with all 4 teams to discuss and share progress with everyone so everyone can learn from each other  </span>
+					<div class="topicHeading">Individual group meetings</div>
+					<span class="content">Schedule TBD, Vikrem can be added as optional and can join as needed </span>
+				</section>
+				<section>
+					Specific team based todos (to get started)
+						<div class="topicHeading">Team 2A - Widget data list views</div>
+						<span class="content"><li>Discovery meetings</li>
+							<li>React, Material Design and Front end brushup</li></span>
+						<div class="topicHeading">Team 2B - Widget explaination views</div>
+						<span class="content"><li>Discovery meetings</li>
+							<li>Learning about Makonis existing SHAP value and model explanation ideas</li>
+							<li>React, Material Design and Front end brushup</li></span>
+						<div class="topicHeading">Team 4 - Widget customizations</div>	
+						<span class="content"><li>Discovery meetings</li>
+							<li>React, Material Design and Front end brushup</li>
+						</span>
+						<div class="topicHeading">Team 6 - New Viz Library Integration</div>
+						<span class="content"><li>Discovery meetings</li>
+							<li>Research and try out popular react friendly viz libraries</li></span>				
+					
+				</section>
+
 			</section>
 
 		</div>
